@@ -7,7 +7,7 @@ export const HomeLayout = () => {
   const outlet = useOutlet();
 
   if (user?.token) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/overview" replace />;
   }
 
   return <Fragment>{outlet}</Fragment>;

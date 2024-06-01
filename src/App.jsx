@@ -1,4 +1,4 @@
-import { Button, Result } from "antd";
+import { Button, ConfigProvider, Result } from "antd";
 import {
   Route,
   RouterProvider,
@@ -68,7 +68,25 @@ export const router = createBrowserRouter(
   )
 );
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ConfigProvider
+      theme={{
+        components: {
+          Typography: {
+            colorText: "#9ca3af",
+            fontFamily: "Poppins",
+            algorithm: true, // Enable algorithm
+          },
+          Input: {
+            colorPrimary: "#9ca3af",
+            algorithm: true, // Enable algorithm
+          },
+        },
+      }}
+    >
+      <RouterProvider router={router} />
+    </ConfigProvider>
+  );
 }
 
 export default App;

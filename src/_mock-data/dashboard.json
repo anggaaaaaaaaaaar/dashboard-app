@@ -1,0 +1,29 @@
+{
+  "header": [
+    { "title": "Unresolved", "value": 60 },
+    { "title": "Overdue", "value": 16 },
+    { "title": "Open", "value": 43 },
+    { "title": "On hold", "value": 64 }
+  ],
+  "chart": {
+    "chart": "",
+    "data": [
+      { "title": "Resolved", "value": 449 },
+      { "title": "Received", "value": 426 },
+      { "title": "Average first response time", "value": "33m" },
+      { "title": "Average response time", "value": "3h 8m" },
+      { "title": "Resolution within SLA", "value": "93%" }
+    ]
+  },
+  "unresolved_tickets": [
+    { "title": "Waiting on Feature Request", "value": 4238 },
+    { "title": "Awaiting Customer Response", "value": 1005 },
+    { "title": "Awaiting Developer Fix", "value": 914 },
+    { "title": "Pending", "value": 281 }
+  ],
+  "task": [
+    { "title": "Finish tiket update", "value": "URGENT" },
+    { "title": "Create new ticket example", "value": "NEW" },
+    { "title": "Update ticket report", "value": "DEFAULT" }
+  ]
+}
