@@ -1,0 +1,8 @@
+{
+  "login": {
+    "loginTo": "Masuk ke",
+    "btnLogin": "Masuk",
+    "enterEmailAndPassword": "Masukkan email dan password dibawah",
+    "dontHaveAnAccount": "<1>Tidak punya akun? <2>Daftar</2></1>"
+  }
+}

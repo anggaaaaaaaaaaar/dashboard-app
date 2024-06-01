@@ -6,8 +6,10 @@ import { AuthService } from "../../_mock-api";
 
 import UsersData from "../../_mock-data/users.json";
 import { useState } from "react";
+import { useTranslation, Trans } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   const { login } = useAuth();
 
   const [loading, setLoading] = useState(false);
@@ -49,10 +51,10 @@ const Index = () => {
           Dashboard kit
         </Typography.Paragraph>
         <Typography.Title level={4} className="!text-black">
-          Log In to Dashboard Kit
+          {t("login.loginTo")} Dashboard Kit
         </Typography.Title>
         <Typography.Paragraph className="text-xs">
-          Enter your email and password below
+          {t("login.enterEmailAndPassword")}
         </Typography.Paragraph>
 
         <Form
@@ -100,13 +102,18 @@ const Index = () => {
               loading={loading}
               disabled={loading}
             >
-              Log In
+              {t("login.btnLogin")}
             </Button>
           </Form.Item>
         </Form>
-        <Typography.Paragraph className="text-xs">
-          Don&apos;t have an account? <a>Sign Up</a>
-        </Typography.Paragraph>
+        <Trans
+          i18nKey="login.dontHaveAnAccount"
+          components={{ 1: <Typography.Paragraph />, 2: <a /> }}
+        >
+          <Typography.Paragraph className="text-xs">
+            Don&apos;t have an account? <a>Sign Up</a>
+          </Typography.Paragraph>
+        </Trans>
       </div>
     </div>
   );

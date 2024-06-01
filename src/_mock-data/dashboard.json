@@ -6,7 +6,7 @@
     { "title": "On hold", "value": 64 }
   ],
   "chart": {
-    "chart": "",
+    "chart": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
     "data": [
       { "title": "Resolved", "value": 449 },
       { "title": "Received", "value": 426 },

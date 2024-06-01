@@ -1,0 +1,8 @@
+{
+  "login": {
+    "loginTo": "Log in to",
+    "btnLogin": "Log In",
+    "enterEmailAndPassword": "Enter your email and password below",
+    "dontHaveAnAccount": "<1>Don't have an account? <2>Sign Up</2></1>"
+  }
+}
