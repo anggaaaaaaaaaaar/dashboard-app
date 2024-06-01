@@ -19,3 +19,7 @@
 | ------------------- | -------- |
 | admin@dashboard.com | admin123 |
 | guest@dashboard.com | guest123 |
+
+## Deployed App
+
+visit: https://dashboard-app-rouge-seven.vercel.app/
