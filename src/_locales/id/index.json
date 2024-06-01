@@ -4,5 +4,57 @@
     "btnLogin": "Masuk",
     "enterEmailAndPassword": "Masukkan email dan password dibawah",
     "dontHaveAnAccount": "<1>Tidak punya akun? <2>Daftar</2></1>"
+  },
+  "tickets": {
+    "allTicket": "Semua tiket",
+    "add": "Tambah Tiket",
+    "addSuccess": "Sukses Tambah Tiket",
+    "addFailed": "Gagal Tambah Tiket",
+    "updateSuccess": "Sukses Ubah Tiket",
+    "column": {
+      "ticketDetail": "Detail tiket",
+      "customerName": "Nama pelanggan",
+      "priority": "Prioritas"
+    },
+    "detail": {
+      "assignTo": "Tugaskan ke",
+      "description": "Deskripsi",
+      "title": "Judul",
+      "rejectTask": "Tolak tiket",
+      "rejectTaskConfirm": "Anda yakin akan menolak tiket ini?",
+      "approveTask": "Setujui tiket",
+      "approveTaskConfirm": "Anda yakin akan menyetujui tiket ini?",
+      "saveTask": "Simpan tiket",
+      "saveTaskConfirm": "Anda yakin akan simpan tiket ini?"
+    }
+  },
+  "general": {
+    "sort": "Urutkan",
+    "search": "Cari",
+    "actions": "Aksi",
+    "edit": "Ubah",
+    "delete": "Hapus",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "close": "Tutup",
+    "filter": "Saring",
+    "date": "Tanggal",
+    "approve": "Setuju",
+    "reject": "Tolak",
+    "detail": "Detail",
+    "high": "Tinggi",
+    "low": "Rendah",
+    "normal": "Normal",
+    "open": "Buka",
+    "closed": "Tutup",
+    "priority": "Prioritas",
+    "status": "Status",
+    "reply": "Balas",
+    "replies": "Balasan",
+    "yes": "Ya",
+    "back": "Kembali"
+  },
+  "form": {
+    "required": "Wajib diisi"
   }
 }

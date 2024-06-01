@@ -8,4 +8,6 @@ export const unprotectedRoute = [
 export const protectedRoute = [
   { path: "/overview", element: DashboardScreen },
   { path: "/tickets", element: TicketScreen.List },
+  { path: "/tickets/detail/:id", element: TicketScreen.Detail },
+  { path: "/tickets/create", element: TicketScreen.Detail },
 ];

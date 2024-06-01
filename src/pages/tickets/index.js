@@ -1,3 +1,4 @@
 import List from "./list";
+import Detail from "./detail";
 
-export default { List };
+export default { List, Detail };

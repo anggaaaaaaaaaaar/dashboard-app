@@ -9,7 +9,7 @@
     "createdAt": "2022-01-01T00:00:00.000Z",
     "updatedAt": "2022-01-01T00:00:00.000Z",
     "closedAt": null,
-    "assignedTo": null,
+    "assignedTo": "John Doe",
     "image": "https://api.dicebear.com/8.x/lorelei/svg"
   },
   {
@@ -22,7 +22,7 @@
     "createdAt": "2022-01-01T00:00:00.000Z",
     "updatedAt": "2022-01-01T00:00:00.000Z",
     "closedAt": null,
-    "assignedTo": null,
+    "assignedTo": "John Doe",
     "image": "https://api.dicebear.com/8.x/lorelei/svg"
   },
   {

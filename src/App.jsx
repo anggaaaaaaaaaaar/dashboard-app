@@ -81,6 +81,14 @@ function App() {
             colorPrimary: "#9ca3af",
             algorithm: true, // Enable algorithm
           },
+          Select: {
+            colorPrimary: "#9ca3af",
+            algorithm: true, // Enable algorithm
+          },
+          DatePicker: {
+            colorPrimary: "#9ca3af",
+            algorithm: true, // Enable algorithm
+          },
           Table: {
             headerBg: "#ffffff",
           },

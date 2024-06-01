@@ -7,10 +7,29 @@
   },
   "tickets": {
     "allTicket": "All Tickets",
+    "add": "Add Ticket",
+    "addSuccess": "Success Add Ticket",
+    "addFailed": "Failed Add Ticket",
+    "updateSuccess": "Success Update Ticket",
+    "approveSuccess": "Success Approve Ticket",
+    "approveFailed": "Failed Approve Ticket",
+    "rejectSuccess": "Success Reject Ticket",
+    "rejectFailed": "Failed Reject Ticket",
     "column": {
       "ticketDetail": "Ticket detail",
       "customerName": "Customer name",
       "priority": "Priority"
+    },
+    "detail": {
+      "assignTo": "Assign to",
+      "description": "Description",
+      "title": "Title",
+      "rejectTask": "Reject the task",
+      "rejectTaskConfirm": "Are you sure to reject this task?",
+      "approveTask": "Approve the task",
+      "approveTaskConfirm": "Are you sure to approve this task?",
+      "saveTask": "Save the task",
+      "saveTaskConfirm": "Are you sure to save this task?"
     }
   },
   "general": {
@@ -26,6 +45,20 @@
     "date": "Date",
     "approve": "Approve",
     "reject": "Reject",
-    "detail": "Detail"
+    "detail": "Detail",
+    "high": "High",
+    "low": "Low",
+    "normal": "Normal",
+    "open": "Open",
+    "closed": "Closed",
+    "priority": "Priority",
+    "status": "Status",
+    "reply": "Reply",
+    "replies": "Replies",
+    "yes": "Yes",
+    "back": "Back"
+  },
+  "form": {
+    "required": "This field is required"
   }
 }
