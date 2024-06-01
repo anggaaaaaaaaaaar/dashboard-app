@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { Avatar, Divider, Layout, Menu, Typography } from "antd";
-import { Navigate, useOutlet } from "react-router-dom";
+import {
+  Navigate,
+  useLocation,
+  useNavigate,
+  useOutlet,
+} from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import {
   FaBell,
@@ -20,6 +25,9 @@ const { Sider, Content, Header } = Layout;
 
 const LayoutEntry = ({ children }) => {
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [selectedMenu, setSelectedMenu] = useState("overview");
 
   const itemsMenu = [
@@ -65,7 +73,12 @@ const LayoutEntry = ({ children }) => {
     },
   ];
 
+  useEffect(() => {
+    setSelectedMenu(location.pathname.split("/")[1]);
+  }, []);
+
   const onClickMenu = (menu) => {
+    navigate("/" + menu.key);
     setSelectedMenu(menu.key);
   };
 

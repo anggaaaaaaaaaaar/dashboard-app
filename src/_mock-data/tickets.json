@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Ticket 1",
+    "status": "Open",
+    "priority": "High",
+    "description": "Ticket 1 description",
+    "customerName": "John Smith",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 7,
+    "title": "Downtime",
+    "status": "Open",
+    "priority": "Normal",
+    "description": "Ticket 1 description",
+    "customerName": "Sam Smith",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 2,
+    "title": "Ticket 1",
+    "status": "Open",
+    "priority": "High",
+    "description": "Ticket 1 description",
+    "customerName": "John Smith",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 3,
+    "title": "Ticket 1",
+    "status": "Open",
+    "priority": "High",
+    "description": "Ticket 1 description",
+    "customerName": "John Smith",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 4,
+    "title": "Unable to add replies",
+    "status": "Open",
+    "priority": "High",
+    "description": "Ticket 1 description",
+    "customerName": "Taylor Swift",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 5,
+    "title": "Adding images to feature post",
+    "status": "Open",
+    "priority": "Low",
+    "description": "Ticket 1 description",
+    "customerName": "Tom Cruise",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  },
+  {
+    "id": 6,
+    "title": "Contact email not linked to account",
+    "status": "Open",
+    "priority": "High",
+    "description": "lorem ipsum",
+    "customerName": "John Jin",
+    "createdAt": "2022-01-01T00:00:00.000Z",
+    "updatedAt": "2022-01-01T00:00:00.000Z",
+    "closedAt": null,
+    "assignedTo": null,
+    "image": "https://api.dicebear.com/8.x/lorelei/svg"
+  }
+]

@@ -4,5 +4,28 @@
     "btnLogin": "Log In",
     "enterEmailAndPassword": "Enter your email and password below",
     "dontHaveAnAccount": "<1>Don't have an account? <2>Sign Up</2></1>"
+  },
+  "tickets": {
+    "allTicket": "All Tickets",
+    "column": {
+      "ticketDetail": "Ticket detail",
+      "customerName": "Customer name",
+      "priority": "Priority"
+    }
+  },
+  "general": {
+    "sort": "Sort",
+    "search": "Search",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "filter": "Filter",
+    "date": "Date",
+    "approve": "Approve",
+    "reject": "Reject",
+    "detail": "Detail"
   }
 }

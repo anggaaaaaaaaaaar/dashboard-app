@@ -81,6 +81,9 @@ function App() {
             colorPrimary: "#9ca3af",
             algorithm: true, // Enable algorithm
           },
+          Table: {
+            headerBg: "#ffffff",
+          },
         },
       }}
     >
