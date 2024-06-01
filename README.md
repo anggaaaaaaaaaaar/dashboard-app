@@ -15,6 +15,7 @@
 
 ## Account to Login
 
-| email | password |
+| email               | password |
+| ------------------- | -------- |
 | admin@dashboard.com | admin123 |
 | guest@dashboard.com | guest123 |
