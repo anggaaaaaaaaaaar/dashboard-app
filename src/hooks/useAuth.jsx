@@ -6,6 +6,7 @@ const initUser = {
   username: "",
   password: "",
   token: "",
+  role: "",
 };
 
 const initContext = {

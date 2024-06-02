@@ -1,8 +1,4 @@
-import { Radio, Space, Typography } from "antd";
-import DashboardData from "../../_mock-data/dashboard.json";
-import { useState } from "react";
-import dayjs from "dayjs";
-import { BiSolidPlusSquare } from "react-icons/bi";
+import { Radio, Typography } from "antd";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -13,7 +9,12 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
+import dayjs from "dayjs";
+import { useState } from "react";
 import { Line } from "react-chartjs-2";
+import { BiSolidPlusSquare } from "react-icons/bi";
+import DashboardData from "../../_mock-data/dashboard.json";
+import { useNavigate } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -38,6 +39,8 @@ function getRandomInt(min, max) {
 }
 
 const Index = () => {
+  const navigate = useNavigate();
+
   const [headerSelect, setHeaderSelect] = useState("");
 
   const options = {
@@ -86,12 +89,12 @@ const Index = () => {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {DashboardData.header.map((item, index) => (
           <button
             id={`btn=${item.title}`}
             key={index}
-            className={`bg-white flex flex-col items-center justify-center gap-2 p-10 border rounded group hover:border-blue-600 ${
+            className={`bg-white flex flex-col items-center justify-center gap-2 p-5 lg:p-10 border rounded group hover:border-blue-600 ${
               index === headerSelect ? "border-blue-600" : ""
             }`}
             onClick={() => setHeaderSelect(index)}
@@ -114,24 +117,32 @@ const Index = () => {
         ))}
       </div>
 
-      <div className="flex bg-white rounded border">
+      <div className="flex flex-col lg:flex-row bg-white rounded border">
         <div className="flex-[3] p-5">
-          <Typography.Paragraph className="text-base text-black">
+          <Typography.Paragraph className="text-sm lg:text-base text-black">
             Today&apos;s trends
           </Typography.Paragraph>
           <div className="flex justify-between">
-            <Typography.Text className=" text-xs">
+            <Typography.Text className="text-xxs lg:text-xs">
               as of{dayjs().format(" DD MMMM YYYY, hh:mm A")}
             </Typography.Text>
-            <Space>
-              <span className="block bg-blue-600 w-4 h-1 rounded-full"></span>
-              <Typography.Text className=" text-xs">Today</Typography.Text>
+            <div className="flex flex-col lg:flex-row lg:space-x-3">
+              <div className="flex items-center space-x-2">
+                <span className="block bg-blue-600 w-4 h-1 rounded-full"></span>
+                <Typography.Text className=" text-xxs lg:text-xs">
+                  Today
+                </Typography.Text>
+              </div>
 
-              <span className="block bg-gray-400 w-4 h-1 rounded-full"></span>
-              <Typography.Text className=" text-xs">Yesterday</Typography.Text>
-            </Space>
+              <div className="flex items-center space-x-2">
+                <span className="block bg-gray-400 w-4 h-1 rounded-full"></span>
+                <Typography.Text className=" text-xxs lg:text-xs">
+                  Yesterday
+                </Typography.Text>
+              </div>
+            </div>
           </div>
-          <Line options={options} data={data} />;
+          <Line options={options} data={data} />
         </div>
         <div className="flex-[1] grid grid-cols-1 gap-2 border-l">
           {DashboardData.chart.data.map((item, index) => (
@@ -150,13 +161,18 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="bg-white rounded border">
           <div className="flex justify-between p-5">
             <Typography.Paragraph className="text-base text-black">
               Unresolved tickets
             </Typography.Paragraph>
-            <button className="text-blue-600">View details</button>
+            <button
+              className="text-blue-600"
+              onClick={() => navigate("/tickets")}
+            >
+              View details
+            </button>
           </div>
           <Typography.Paragraph className="text-xs px-5">
             Group:{" "}
@@ -180,6 +196,7 @@ const Index = () => {
             ))}
           </div>
         </div>
+
         <div className="bg-white rounded border">
           <div className="flex justify-between p-5">
             <Typography.Paragraph className="text-base text-black">

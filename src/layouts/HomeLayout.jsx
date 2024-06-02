@@ -7,7 +7,9 @@ export const HomeLayout = () => {
   const outlet = useOutlet();
 
   if (user?.token) {
-    return <Navigate to="/overview" replace />;
+    return (
+      <Navigate to={user.role === "admin" ? "/overview" : "/tickets"} replace />
+    );
   }
 
   return <Fragment>{outlet}</Fragment>;

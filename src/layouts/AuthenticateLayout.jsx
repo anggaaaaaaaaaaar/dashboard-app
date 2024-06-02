@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Avatar, Divider, Layout, Menu, Typography } from "antd";
+import { Avatar, Divider, Dropdown, Layout, Menu, Typography } from "antd";
 import {
   Navigate,
   useLocation,
@@ -21,10 +21,12 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { IoRibbonSharp } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 const { Sider, Content, Header } = Layout;
 
 const LayoutEntry = ({ children }) => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,47 +37,55 @@ const LayoutEntry = ({ children }) => {
       key: "overview",
       icon: <FaChartPie />,
       label: "Overview",
+      isShow: user.role === "admin",
     },
     {
       key: "tickets",
       icon: <FaTicketSimple />,
       label: "Tickets",
+      isShow: true,
     },
     {
       key: "ideas",
       icon: <FaLightbulb />,
       label: "Ideas",
+      isShow: user.role === "admin",
     },
     {
       key: "contacts",
       icon: <HiMiniUserGroup />,
       label: "Contacts",
+      isShow: user.role === "admin",
     },
     {
       key: "agents",
       icon: <FaUserTie />,
       label: "Agents",
+      isShow: user.role === "admin",
     },
     {
       key: "articles",
       icon: <FaBook />,
       label: "Articles",
+      isShow: user.role === "admin",
     },
     {
       key: "settings",
       icon: <IoMdSettings />,
       label: "Settings",
+      isShow: user.role === "admin",
     },
     {
       key: "subscription",
       icon: <IoRibbonSharp />,
       label: "Subscriptions",
+      isShow: user.role === "admin",
     },
   ];
 
   useEffect(() => {
     setSelectedMenu(location.pathname.split("/")[1]);
-  }, []);
+  }, [location]);
 
   const onClickMenu = (menu) => {
     navigate("/" + menu.key);
@@ -105,13 +115,13 @@ const LayoutEntry = ({ children }) => {
             theme="dark"
             mode="inline"
             selectedKeys={[selectedMenu]}
-            items={itemsMenu}
+            items={itemsMenu.filter((res) => res.isShow)}
             onClick={onClickMenu}
           />
         </Content>
       </Sider>
       <Layout>
-        <Header className="bg-transparent flex justify-between items-center">
+        <Header className="bg-transparent flex justify-between items-center p-6 lg:p-[50px] ">
           <Typography.Text className="font-bold text-base text-black capitalize">
             {selectedMenu}
           </Typography.Text>
@@ -122,10 +132,22 @@ const LayoutEntry = ({ children }) => {
             <Typography.Text className="capitalize">
               {user.username}
             </Typography.Text>
-            <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+            <Dropdown
+              menu={{
+                items: [
+                  {
+                    key: "logout",
+                    label: t("login.logout"),
+                  },
+                ],
+                onClick: () => logout(),
+              }}
+            >
+              <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+            </Dropdown>
           </div>
         </Header>
-        <Content className="h-full overflow-y-scroll bg-transparent p-[50px] flex justify-center">
+        <Content className="h-full overflow-y-scroll bg-transparent p-6 lg:p-[50px] flex justify-center">
           <div className="max-w-[1400px] w-full">{children}</div>
         </Content>
       </Layout>

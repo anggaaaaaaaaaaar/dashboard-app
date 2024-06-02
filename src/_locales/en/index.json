@@ -3,7 +3,8 @@
     "loginTo": "Log in to",
     "btnLogin": "Log In",
     "enterEmailAndPassword": "Enter your email and password below",
-    "dontHaveAnAccount": "<1>Don't have an account? <2>Sign Up</2></1>"
+    "dontHaveAnAccount": "<1>Don't have an account? <2>Sign Up</2></1>",
+    "logout": "Log out"
   },
   "tickets": {
     "allTicket": "All Tickets",
@@ -31,6 +32,11 @@
       "saveTask": "Save the task",
       "saveTaskConfirm": "Are you sure to save this task?"
     }
+  },
+  "settings": {
+    "language": "Language",
+    "profile": "Profile",
+    "changePassword": "Change Password"
   },
   "general": {
     "sort": "Sort",

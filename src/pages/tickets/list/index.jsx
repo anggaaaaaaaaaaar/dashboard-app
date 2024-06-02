@@ -69,6 +69,7 @@ const Index = () => {
     {
       title: t("tickets.column.ticketDetail"),
       dataIndex: "title",
+      width: 400,
       render: (value, record) => (
         <div className="flex space-x-2">
           <Avatar src={record.image} />
@@ -86,6 +87,7 @@ const Index = () => {
     {
       title: t("tickets.column.customerName"),
       dataIndex: "customerName",
+      width: 200,
       render: (value, record) => (
         <div>
           <Typography.Paragraph className="text-black">
@@ -100,6 +102,7 @@ const Index = () => {
     {
       title: t("general.date"),
       dataIndex: "createdAt",
+      width: 200,
       render: (value, record) => (
         <div>
           <Typography.Paragraph className="text-black">
@@ -114,6 +117,7 @@ const Index = () => {
     {
       title: t("tickets.column.priority"),
       dataIndex: "priority",
+      width: 200,
       render: (value) => (
         <span
           className={`rounded-full px-2 py-1 text-xs text-white ${
@@ -189,7 +193,13 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <Table columns={columns} dataSource={list} rowKey="id" />
+        <Table
+          columns={columns}
+          dataSource={list}
+          rowKey="id"
+          pagination={{ pageSize: 5, total: list?.length }}
+          scroll={{ x: 700 }}
+        />
       </div>
     </Fragment>
   );

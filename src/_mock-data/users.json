@@ -4,13 +4,15 @@
     "username": "admin",
     "email": "admin@dashboard.com",
     "password": "admin123",
-    "name": "Admin"
+    "name": "Admin",
+    "role": "admin"
   },
   {
     "userId": 2,
     "username": "guest",
     "email": "guest@dashboard.com",
     "password": "guest123",
-    "name": "Guest"
+    "name": "Guest",
+    "role": "guest"
   }
 ]

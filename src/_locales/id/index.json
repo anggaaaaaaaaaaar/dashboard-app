@@ -3,7 +3,8 @@
     "loginTo": "Masuk ke",
     "btnLogin": "Masuk",
     "enterEmailAndPassword": "Masukkan email dan password dibawah",
-    "dontHaveAnAccount": "<1>Tidak punya akun? <2>Daftar</2></1>"
+    "dontHaveAnAccount": "<1>Tidak punya akun? <2>Daftar</2></1>",
+    "logout": "Keluar"
   },
   "tickets": {
     "allTicket": "Semua tiket",
@@ -27,6 +28,11 @@
       "saveTask": "Simpan tiket",
       "saveTaskConfirm": "Anda yakin akan simpan tiket ini?"
     }
+  },
+  "settings": {
+    "language": "Bahasa",
+    "profile": "Profil",
+    "changePassword": "Ganti Password"
   },
   "general": {
     "sort": "Urutkan",

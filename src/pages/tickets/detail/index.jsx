@@ -113,7 +113,7 @@ const Index = () => {
     <div>
       <Button
         type="link"
-        className="px-0 mb-5 text-black flex items-center space-x-1"
+        className="px-0 mt-3 lg:mt-0 mb-5 text-black flex items-center space-x-1"
         onClick={() => navigate(-1)}
       >
         <MdKeyboardArrowLeft size={24} className="text-black" />{" "}
@@ -124,7 +124,7 @@ const Index = () => {
         name="form-ticket"
         form={form}
         layout="vertical"
-        className="grid grid-cols-2 gap-4"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4"
         requiredMark={false}
       >
         <Form.Item
