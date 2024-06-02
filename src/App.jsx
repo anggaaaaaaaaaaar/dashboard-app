@@ -11,7 +11,10 @@ import { AuthLayout } from "./layouts/AuthLayout";
 import { HomeLayout } from "./layouts/HomeLayout";
 import { AuthenticatedLayout } from "./layouts/AuthenticateLayout";
 import { protectedRoute, unprotectedRoute } from "./routes";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import { setDark } from "./store/settings";
 
 const getUserData = () =>
   new Promise((resolve) => {
@@ -69,7 +72,14 @@ export const router = createBrowserRouter(
   )
 );
 function App() {
+  const dispatch = useDispatch();
+
+  const [dark] = useLocalStorage("darkMode", false);
   const darkmode = useSelector((state) => state.setting.dark);
+
+  useEffect(() => {
+    dispatch(setDark(dark));
+  }, []);
   return (
     <ConfigProvider
       theme={{

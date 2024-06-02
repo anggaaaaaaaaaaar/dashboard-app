@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { Select, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { setDark } from "../../store/settings";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const Index = () => {
   const { t, i18n } = useTranslation();
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode");
+
   const dispatch = useDispatch();
 
   const onChangeLanguage = (value) => {
@@ -12,6 +16,7 @@ const Index = () => {
   };
 
   const onChangeDarkMode = (value) => {
+    setDarkMode(value);
     dispatch(setDark(value));
   };
   return (
@@ -32,6 +37,7 @@ const Index = () => {
         <Typography.Paragraph>{t("settings.darkMode")}</Typography.Paragraph>
         <Select
           className="w-40"
+          defaultValue={darkMode}
           onChange={onChangeDarkMode}
           options={[
             { value: true, label: t("general.on") },

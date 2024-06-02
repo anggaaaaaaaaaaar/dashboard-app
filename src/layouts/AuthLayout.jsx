@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-children-prop */
 
 import { Suspense } from "react";
@@ -9,6 +10,7 @@ import {
   useOutlet,
 } from "react-router-dom";
 import { AuthProvider } from "../hooks/useAuth";
+import logo from "../assets/logo.svg";
 
 export const AuthLayout = () => {
   const outlet = useOutlet();
@@ -24,11 +26,7 @@ export const AuthLayout = () => {
     <Suspense
       fallback={
         <div className="flex h-[100vh] w-full items-center justify-center">
-          <img
-            src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=22`}
-            alt="logo"
-            className="animate-heartBeat"
-          />
+          <img src={logo} alt="logo" className="animate-pulse" />
         </div>
       }
     >

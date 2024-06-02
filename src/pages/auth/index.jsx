@@ -2,15 +2,17 @@
 import { Button, Form, Input, Typography, notification } from "antd";
 import { TbSquareRoundedLetterDFilled } from "react-icons/tb";
 import useAuth from "../../hooks/useAuth";
-import { AuthService } from "../../_mock-api";
 
-import UsersData from "../../_mock-data/users.json";
 import { useState } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import UsersData from "../../_mock-data/users.json";
+import { useSelector } from "react-redux";
 
 const Index = () => {
   const { t } = useTranslation();
   const { login } = useAuth();
+
+  const darkMode = useSelector((state) => state.setting.dark);
 
   const [loading, setLoading] = useState(false);
 
@@ -34,23 +36,19 @@ const Index = () => {
       });
       setLoading(false);
     }
-
-    // AuthService.login(payload)
-    //   .then((res) => {
-    //     console.log("res ", res);
-    //   })
-    //   .catch((err) => {
-    //     console.log("err", err);
-    //   });
   };
   return (
-    <div className="flex h-[100vh] w-full items-center justify-center bg-black">
-      <div className="w-[350px] bg-white p-6 rounded-md flex flex-col items-center">
+    <div
+      className={`${
+        darkMode ? "dark" : ""
+      } flex h-[100vh] w-full items-center justify-center bg-black dark:bg-dark`}
+    >
+      <div className="w-[350px] bg-white dark:bg-dark border p-6 rounded-md flex flex-col items-center">
         <TbSquareRoundedLetterDFilled size={36} color="#1890ff" />
         <Typography.Paragraph className="font-bold">
           Dashboard kit
         </Typography.Paragraph>
-        <Typography.Title level={4} className="!text-black">
+        <Typography.Title level={4} className="text-black dark:text-gray-200">
           {t("login.loginTo")} Dashboard Kit
         </Typography.Title>
         <Typography.Paragraph className="text-xs">

@@ -95,17 +95,25 @@ const LayoutEntry = ({ children }) => {
     setSelectedMenu(menu.key);
   };
 
+  const items = () => {
+    const menus = [];
+
+    itemsMenu.forEach((res) => {
+      if (res.isShow) {
+        menus.push({ key: res.key, icon: res.icon, label: res.label });
+      }
+    });
+
+    return menus;
+  };
+
   return (
     <Layout className={`h-[100vh] ${darkmode ? "dark" : ""}`}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
+        onBreakpoint={(broken) => {}}
+        onCollapse={(collapsed, type) => {}}
       >
         <Content>
           <div className="flex items-center gap-2 p-5">
@@ -118,7 +126,7 @@ const LayoutEntry = ({ children }) => {
             theme="dark"
             mode="inline"
             selectedKeys={[selectedMenu]}
-            items={itemsMenu.filter((res) => res.isShow)}
+            items={items()}
             onClick={onClickMenu}
           />
         </Content>
