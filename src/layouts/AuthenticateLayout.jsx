@@ -76,7 +76,7 @@ const LayoutEntry = ({ children }) => {
       key: "settings",
       icon: <IoMdSettings />,
       label: "Settings",
-      isShow: user.role === "admin",
+      isShow: true,
     },
     {
       key: "subscription",
