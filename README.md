@@ -23,3 +23,8 @@
 ## Deployed App
 
 visit: https://dashboard-app-rouge-seven.vercel.app/
+
+## Feature
+
+1. Bilingual(English and Indonesian)
+2. Dark mode
