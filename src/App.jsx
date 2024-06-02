@@ -1,4 +1,4 @@
-import { Button, ConfigProvider, Result } from "antd";
+import { Button, ConfigProvider, Result, theme } from "antd";
 import {
   Route,
   RouterProvider,
@@ -11,6 +11,7 @@ import { AuthLayout } from "./layouts/AuthLayout";
 import { HomeLayout } from "./layouts/HomeLayout";
 import { AuthenticatedLayout } from "./layouts/AuthenticateLayout";
 import { protectedRoute, unprotectedRoute } from "./routes";
+import { useSelector } from "react-redux";
 
 const getUserData = () =>
   new Promise((resolve) => {
@@ -68,9 +69,11 @@ export const router = createBrowserRouter(
   )
 );
 function App() {
+  const darkmode = useSelector((state) => state.setting.dark);
   return (
     <ConfigProvider
       theme={{
+        algorithm: darkmode ? theme.darkAlgorithm : theme.compactAlgorithm,
         components: {
           Typography: {
             colorText: "#9ca3af",
@@ -90,7 +93,8 @@ function App() {
             algorithm: true, // Enable algorithm
           },
           Table: {
-            headerBg: "#ffffff",
+            // headerBg: "#ffffff",
+            algorithm: true, // Enable algorithm
           },
         },
       }}

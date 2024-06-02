@@ -94,20 +94,20 @@ const Index = () => {
           <button
             id={`btn=${item.title}`}
             key={index}
-            className={`bg-white flex flex-col items-center justify-center gap-2 p-5 lg:p-10 border rounded group hover:border-blue-600 ${
+            className={`bg-white dark:bg-dark flex flex-col items-center justify-center gap-2 p-5 lg:p-10 border rounded group hover:border-blue-600 ${
               index === headerSelect ? "border-blue-600" : ""
             }`}
             onClick={() => setHeaderSelect(index)}
           >
             <Typography.Paragraph
-              className={`font-semibold group-hover:text-blue-600  ${
+              className={`font-semibold group-hover:text-blue-600 dark:text-gray-200  ${
                 index === headerSelect ? "text-blue-600" : ""
               }`}
             >
               {item.title}
             </Typography.Paragraph>
             <Typography.Paragraph
-              className={`text-3xl font-semibold group-hover:text-blue-600  ${
+              className={`text-3xl font-semibold group-hover:text-blue-600 dark:text-gray-200  ${
                 index === headerSelect ? "text-blue-600" : "text-black "
               }`}
             >
@@ -117,9 +117,9 @@ const Index = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row bg-white rounded border">
+      <div className="flex flex-col lg:flex-row bg-white dark:bg-dark rounded border">
         <div className="flex-[3] p-5">
-          <Typography.Paragraph className="text-sm lg:text-base text-black">
+          <Typography.Paragraph className="text-sm lg:text-base text-black dark:text-white">
             Today&apos;s trends
           </Typography.Paragraph>
           <div className="flex justify-between">
@@ -153,7 +153,7 @@ const Index = () => {
               }`}
             >
               <Typography.Text>{item.title}</Typography.Text>
-              <Typography.Text className="text-black font-medium text-base">
+              <Typography.Text className="text-black font-medium text-base dark:text-gray-200">
                 {item.value}
               </Typography.Text>
             </div>
@@ -162,9 +162,9 @@ const Index = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="bg-white rounded border">
+        <div className="bg-white dark:bg-dark rounded border">
           <div className="flex justify-between p-5">
-            <Typography.Paragraph className="text-base text-black">
+            <Typography.Paragraph className="text-base text-black dark:text-gray-200">
               Unresolved tickets
             </Typography.Paragraph>
             <button
@@ -176,7 +176,7 @@ const Index = () => {
           </div>
           <Typography.Paragraph className="text-xs px-5">
             Group:{" "}
-            <Typography.Text className="text-xs font-medium text-black">
+            <Typography.Text className="text-xs font-medium text-black dark:text-gray-200">
               Support
             </Typography.Text>
           </Typography.Paragraph>
@@ -197,9 +197,9 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded border">
+        <div className="bg-white dark:bg-dark rounded border">
           <div className="flex justify-between p-5">
-            <Typography.Paragraph className="text-base text-black">
+            <Typography.Paragraph className="text-base text-black dark:text-gray-200">
               Tasks
             </Typography.Paragraph>
             <button className="text-blue-600">View details</button>

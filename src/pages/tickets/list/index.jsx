@@ -170,16 +170,16 @@ const Index = () => {
     <Fragment>
       <div className="flex justify-end my-5">
         <Button
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-2 dark:bg-dark dark:text-gray-200"
           onClick={() => navigate("/tickets/create")}
         >
           <FaPlus className="text-gray-400" />
           {t("tickets.add")}
         </Button>
       </div>
-      <div className="bg-white rounded border">
+      <div className="bg-white dark:bg-dark rounded border">
         <div className="flex justify-between p-5">
-          <Typography.Paragraph className="text-black">
+          <Typography.Paragraph className="text-black dark:text-gray-200">
             {t("tickets.allTicket")}
           </Typography.Paragraph>
           <div className="flex space-x-4">
@@ -199,6 +199,7 @@ const Index = () => {
           rowKey="id"
           pagination={{ pageSize: 5, total: list?.length }}
           scroll={{ x: 700 }}
+          className="dark:text-gray-200 dark:bg-dark"
         />
       </div>
     </Fragment>

@@ -32,7 +32,8 @@
   "settings": {
     "language": "Bahasa",
     "profile": "Profil",
-    "changePassword": "Ganti Password"
+    "changePassword": "Ganti Password",
+    "darkMode": "Dark Mode"
   },
   "general": {
     "sort": "Urutkan",
@@ -58,7 +59,9 @@
     "reply": "Balas",
     "replies": "Balasan",
     "yes": "Ya",
-    "back": "Kembali"
+    "back": "Kembali",
+    "on": "Aktif",
+    "off": "Tidak Aktif"
   },
   "form": {
     "required": "Wajib diisi"

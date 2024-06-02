@@ -36,7 +36,8 @@
   "settings": {
     "language": "Language",
     "profile": "Profile",
-    "changePassword": "Change Password"
+    "changePassword": "Change Password",
+    "darkMode": "Dark Mode"
   },
   "general": {
     "sort": "Sort",
@@ -62,7 +63,9 @@
     "reply": "Reply",
     "replies": "Replies",
     "yes": "Yes",
-    "back": "Back"
+    "back": "Back",
+    "on": "On",
+    "off": "Off"
   },
   "form": {
     "required": "This field is required"

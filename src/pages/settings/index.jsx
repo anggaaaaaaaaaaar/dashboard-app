@@ -1,15 +1,22 @@
 import { Select, Typography } from "antd";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { setDark } from "../../store/settings";
 
 const Index = () => {
   const { t, i18n } = useTranslation();
+  const dispatch = useDispatch();
 
   const onChangeLanguage = (value) => {
     i18n.changeLanguage(value);
   };
+
+  const onChangeDarkMode = (value) => {
+    dispatch(setDark(value));
+  };
   return (
-    <div className="bg-white h-full border rounded p-5 grid grid-cols-2">
-      <div className="flex justify-between">
+    <div className="bg-white dark:bg-dark h-full border rounded p-5 space-y-5">
+      <div className="flex justify-between lg:max-w-[50%]">
         <Typography.Paragraph>{t("settings.language")}</Typography.Paragraph>
         <Select
           className="w-40"
@@ -18,6 +25,17 @@ const Index = () => {
           options={[
             { value: "en", label: "English" },
             { value: "id", label: "Indonesia" },
+          ]}
+        />
+      </div>
+      <div className="flex justify-between lg:max-w-[50%]">
+        <Typography.Paragraph>{t("settings.darkMode")}</Typography.Paragraph>
+        <Select
+          className="w-40"
+          onChange={onChangeDarkMode}
+          options={[
+            { value: true, label: t("general.on") },
+            { value: false, label: t("general.off") },
           ]}
         />
       </div>

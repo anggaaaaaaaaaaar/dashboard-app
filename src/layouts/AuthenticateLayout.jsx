@@ -22,6 +22,7 @@ import { IoMdSettings } from "react-icons/io";
 import { IoRibbonSharp } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 const { Sider, Content, Header } = Layout;
 
 const LayoutEntry = ({ children }) => {
@@ -29,6 +30,8 @@ const LayoutEntry = ({ children }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
+
+  const darkmode = useSelector((state) => state.setting.dark);
 
   const [selectedMenu, setSelectedMenu] = useState("overview");
 
@@ -93,7 +96,7 @@ const LayoutEntry = ({ children }) => {
   };
 
   return (
-    <Layout className="h-[100vh]">
+    <Layout className={`h-[100vh] ${darkmode ? "dark" : ""}`}>
       <Sider
         breakpoint="lg"
         collapsedWidth="0"
@@ -121,8 +124,8 @@ const LayoutEntry = ({ children }) => {
         </Content>
       </Sider>
       <Layout>
-        <Header className="bg-transparent flex justify-between items-center p-6 lg:p-[50px] ">
-          <Typography.Text className="font-bold text-base text-black capitalize">
+        <Header className="bg-transparent dark:bg-slate-800 flex justify-between items-center p-6 lg:p-[50px] ">
+          <Typography.Text className="font-bold text-base text-black dark:text-gray-200 capitalize">
             {selectedMenu}
           </Typography.Text>
           <div className="flex items-center space-x-5">
@@ -147,7 +150,7 @@ const LayoutEntry = ({ children }) => {
             </Dropdown>
           </div>
         </Header>
-        <Content className="h-full overflow-y-scroll bg-transparent p-6 lg:p-[50px] flex justify-center">
+        <Content className="h-full overflow-y-scroll bg-transparent dark:bg-slate-800 p-6 lg:p-[50px] flex justify-center">
           <div className="max-w-[1400px] w-full">{children}</div>
         </Content>
       </Layout>
